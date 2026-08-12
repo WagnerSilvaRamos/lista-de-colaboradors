@@ -3,7 +3,7 @@
         <p v-if="employees.length < 1" class="empty-table">
     No employees
   </p>
-       <table class="table" v-else>
+       <table class="table"  v-else>
            <thead>
                <tr>
                    <th>Employee Name</th>
@@ -63,5 +63,18 @@ export default {
 <style scoped>
 .btn-info, .btn-info, .btn-success{ margin-right: 10px;}
 td{line-height: 40px;}
+
+@media screen and (max-width: 766px) {
+
+  .table{
+     width: 570px;
+     max-width: 570px;
+    display: block;
+     margin: 0 auto;
+  }
+
+  #employee-table{ overflow-x: auto;}
+
+}
 
 </style>

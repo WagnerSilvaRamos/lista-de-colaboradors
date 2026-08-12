@@ -3,15 +3,16 @@
     id="app"
     class="small-container"
   >
-    <h1>Employees</h1>
+    <h1>Manager List Employees</h1>
 
-    <employee-form @add:employee="addEmployee" />
-    <employee-table
+    <EmployeeForm @add:employee="addEmployee" />
+    <EmployeeTable
       :employees="employees"
       @delete:employee="deleteEmployee"
       @edit:employee="editEmployee"
     />
   </div>
+
 </template>
 
 <script>
@@ -88,17 +89,29 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body{ margin: 0; padding: 0; font-family: 'Nunito', sans-serif; font-size: 16px;}
+
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
+ }
 
 .small-container {
-  max-width: 680px;
+  max-width: 50rem;
   margin: 0 auto;
+  width: 100%;
 }
+
+main{ margin: 5rem auto; background: #f5f5f5; border-radius: 28px; padding: 3rem 0; max-width: 60rem; width: 100%; position: relative}
+
+@media screen and (max-width: 766px) {
+
+  main, .small-container { width: 100%; max-width: 600px; margin: 0 auto; background-color: transparent}
+}
+
 </style>

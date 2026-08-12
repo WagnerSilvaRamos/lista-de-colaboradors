@@ -88,6 +88,9 @@ this.submitting = false
 form {
   margin-bottom: 2rem;
 }
+
+label{ margin: 0.5rem 0}
+
 label,
 button {
   display: flex;
@@ -109,5 +112,11 @@ button {
     color: #32a95d;
   }
 
-  p{ text-align: left; margin: 10px 0 0;}
+    p{ text-align: left; margin: 10px 0 0;}
+
+@media screen and (max-width: 766px) {
+      #employee-form{ display: block; justify-content: center; max-width: 480px; margin: 0 auto;}
+    form{ padding: 0 1rem; margin: 0 auto}
+
+    }
 </style>

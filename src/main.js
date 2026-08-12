@@ -1,6 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+// Import Bootstrap and BootstrapVue CSS files
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Install BootstrapVue globally
+import { BootstrapVue} from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+
 Vue.config.productionTip = false
 
 new Vue({
